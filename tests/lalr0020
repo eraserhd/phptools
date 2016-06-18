@@ -1,0 +1,28 @@
+submitted-by: 	"Jay 'Eraserhead' Felice <jfelice@cronosys.com>"
+date: 		"Tue Apr 17, 2002"
+options:	()
+description:	"Binding names to values."
+result:
+(compound-statement
+  (reference-assign
+    (var-lookup "j")
+    (var-lookup "q"))
+  (reference-assign (var-lookup "k") (new "Cl" ()))
+  (reference-assign
+    (var-lookup "l")
+    (function-call #f "funcall"))
+  (var-value (new "Cl" ()))
+  (var-value (function-call #f "funcall")))
+
+
+code:
+<?php 
+
+$j =& $q;
+$k =& new Cl;
+$l =& funcall ();
+
+new Cl;
+funcall ();
+
+?>

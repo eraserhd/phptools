@@ -1,0 +1,17 @@
+submitted-by: 	"Jay 'Eraserhead' Felice <jfelice@cronosys.com>"
+date: 		"Tue Feb  5, 2002"
+options:	()
+description:	"Numbers."
+result:
+((v-lnumber . 42)
+ (v-lnumber . 67)
+ (v-lnumber . 255)
+ (v-lnumber . 27)
+ (v-lnumber . 0)
+ (v-lnumber . 127)
+ op-semicolon)
+
+code:
+<?php
+  42 67 0xff 0X1B 0 0177
+?>

@@ -1,0 +1,15 @@
+submitted-by: 	"Jay 'Eraserhead' Felice <jfelice@cronosys.com>"
+date: 		"Tue Mar 19, 2002"
+options:	()
+description:	"`echo' statements."
+result:
+(compound-statement
+  (echo "part-1" "part-2")
+  (echo "part-3"))
+
+code:
+<?php 
+  echo "part-1", "part-2";
+  ?>part-3<?php
+?>
+

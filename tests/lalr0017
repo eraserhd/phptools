@@ -1,0 +1,24 @@
+submitted-by: 	"Jay 'Eraserhead' Felice <jfelice@cronosys.com>"
+date: 		"Tue Mar 19, 2002"
+options:	()
+description:	"Assignment lists and arrays."
+result:
+(compound-statement
+  (list-assign
+    ((var-lookup "var1")
+     (var-lookup "var2")
+     (array-lookup (var-lookup "var") "with_index"))
+    (array (0 value 1) (1 value 2) (2 value 3)))
+  (list-assign
+    ((var-lookup "expr")
+     (assignment-list
+       ((var-lookup "sub1") (var-lookup "sub2")))
+     (var-lookup "expr3"))
+    (array (0 value 1) (1 value (array (0 value 2) (1 value 3))) (2 value 4))))
+
+code:
+<?php 
+
+	list ($var1, $var2, $var['with_index']) = array(1,2,3);
+	list ($expr, list ($sub1, $sub2), $expr3) = array(1,array(2,3),4);
+?>

@@ -1,0 +1,34 @@
+submitted-by: 	"Jay 'Eraserhead' Felice <jfelice@cronosys.com>"
+date: 		"Tue Mar 19, 2002"
+options:	()
+description:	"`foreach' statement."
+result:
+(compound-statement
+  (foreach
+    (var-lookup "a")
+    (var-lookup "k")
+    (var-lookup "v")
+    "statement")
+  (foreach
+    (var-lookup "a")
+    #f
+    (var-lookup "v")
+    "statement")
+  (foreach
+    (array (0 value 1) (1 value 2) (2 value 3))
+    #f
+    (var-lookup "v")
+    "statement"))
+
+code:
+<?php 
+  
+  foreach ( $a as $k => $v )
+    "statement";
+  foreach ( $a as $v )
+    "statement";
+  foreach ( array( 1, 2, 3 ) as $v )
+    "statement";
+
+?>
+

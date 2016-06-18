@@ -1,0 +1,18 @@
+submitted-by: 	"Jay 'Eraserhead' Felice <jfelice@cronosys.com>"
+date: 		"Tue Apr 17, 2002"
+options:	()
+description:	"Object and array refrencing."
+result:
+(var-value
+(op--> (var-value (array-lookup (var-value (op-->
+  (var-value
+  (array-lookup (var-value (op--> (var-value (var-lookup "obj")) "prop")) "index")
+  )
+  "prop2")) 2)) "v"))
+
+code:
+<?php 
+
+$obj->prop['index']->prop2[2]->v;
+
+?>

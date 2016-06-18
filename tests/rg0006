@@ -1,0 +1,27 @@
+submitted-by: 	"Jay 'Eraserhead' Felice <jfelice@cronosys.com>"
+date: 		"Tue Feb  5, 2002"
+options:	(file: "rg0006")
+description:	"__FILE__ and __LINE__."
+result:
+( (v-string . "rg0006")
+  (v-lnumber . 3)
+  (v-lnumber . 5)
+  (v-lnumber . 12)
+  op-semicolon
+  )
+
+code:
+<?php
+
+  __FILE__ __LINE__
+
+  __LINE__
+
+
+
+
+
+
+  __LINE__
+
+?>

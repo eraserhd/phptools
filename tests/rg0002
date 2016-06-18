@@ -1,0 +1,9 @@
+submitted-by: 	"Jay 'Eraserhead' Felice <jfelice@cronosys.com>"
+date: 		"Tue Feb  5, 2002"
+options:	()
+description:	"Inline HTML."
+result:
+((v-inline-html . "<html></html>"))
+
+code:
+<html></html>

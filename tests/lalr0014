@@ -1,0 +1,49 @@
+submitted-by: 	"Jay 'Eraserhead' Felice <jfelice@cronosys.com>"
+date: 		"Wed Mar 20, 2002"
+options:	()
+description:	"Classes."
+result:
+(compound-statement
+  (class "test"
+         #f
+         (("i" . null) ("jj" . 42) ("l" . null))
+         (function
+           "test"
+           #f
+           ("g"
+            (by-reference "r")
+            (const "t")
+            (default "v" 1))
+           "method-statement")
+         (function
+           "test"
+           #f
+           ("g"
+            (by-reference "r")
+            (const "t")
+            (default "v" 1))
+           "method-statement"))
+  (class "test2" "test" ()))
+
+code:
+<?php 
+  
+  class test {
+  
+  	var $i;
+	var $jj = 42, $l;
+
+	function test ($g, &$r, const $t, $v = 1)
+	{
+	   "method-statement";
+	}
+
+	old_function test $g, &$r, const $t, $v = 1 (
+	   "method-statement";
+	);
+  };
+
+  class test2 extends test {
+  };
+
+?>

@@ -1,0 +1,36 @@
+submitted-by: 	"Jay 'Eraserhead' Felice <jfelice@cronosys.com>"
+date: 		"Tue Mar 19, 2002"
+options:	()
+description:	"switch statements."
+result:
+(switch
+  (var-value (var-lookup "i"))
+  (case 1 (compound-statement "case-1" (break 1)))
+  (case 2 (null-statement))
+  (case 3 "case-2-and-3")
+  (case 4
+        (compound-statement
+          "case-2-and-3-and-4"
+          (break 1)))
+  (default "default-statement"))
+
+code:
+<?php 
+  switch ($i) {
+  case 1:
+      "case-1";
+      break;
+
+  case 2:
+  case 3:
+      "case-2-and-3";
+
+  case 4:
+      "case-2-and-3-and-4";
+      break;
+
+  default:
+      "default-statement";
+  }
+?>
+

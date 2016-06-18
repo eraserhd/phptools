@@ -1,0 +1,33 @@
+submitted-by: 	"Jay 'Eraserhead' Felice <jfelice@cronosys.com>"
+date: 		"Tue Mar 19, 2002"
+options:	()
+description:	"Function calls."
+result:
+(compound-statement
+  (var-value
+    (function-call
+      #f
+      "funcall"
+      (value-parameter 1)
+      (value-parameter 2)
+      (referenceable-parameter (var-lookup "var"))
+      (forced-reference-parameter
+	(var-lookup "refvar"))))
+  (var-value
+    (function-call
+      "Test_Class"
+      "methcall"
+      (value-parameter 1)
+      (value-parameter 2)
+      (referenceable-parameter (var-lookup "var"))
+      (forced-reference-parameter
+	(var-lookup "refvar")))))
+
+code:
+<?php 
+
+	funcall (1, 2, $var, &$refvar);
+
+	Test_Class::methcall (1, 2, $var, &$refvar);
+
+?>

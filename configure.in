@@ -1,0 +1,31 @@
+# Process this file with autoconf to produce a configure script.
+AC_INIT(php-rg.scm)
+AM_INIT_AUTOMAKE(phptools,0.5)
+
+# Programs
+AC_PROG_CC
+
+AC_PATH_PROG(BIGLOO,bigloo,no)
+if test "$BIGLOO" = "no" ; then
+  AC_MSG_ERROR(** bigloo Scheme compiler is required to compile phptools **)
+fi
+AC_SUBST(BIGLOO)
+
+dnl *
+dnl * This is a hack because we don't use a C compiler and we use bigloo
+dnl * as the linker.  It so happens to take the same sorts of flags as the
+dnl * C compiler would when acting as a linker.
+dnl *
+CC="$BIGLOO"
+CFLAGS=
+CPPFLAGS=
+
+# Checks for libraries.
+
+# Checks for header files.
+
+# Checks for typedefs, structures, and compiler characteristics.
+
+# Checks for library functions.
+
+AC_OUTPUT(Makefile tests/Makefile)

@@ -1,0 +1,23 @@
+submitted-by: 	"Jay 'Eraserhead' Felice <jfelice@cronosys.com>"
+date: 		"Tue Feb  5, 2002"
+options:	()
+description:	"Keywords."
+result:
+(kw-exit kw-exit kw-old_function kw-function kw-function kw-const kw-if
+ kw-elseif kw-endif kw-else kw-while kw-endwhile kw-do kw-for kw-endfor
+ kw-foreach kw-endforeach kw-declare kw-enddeclare kw-as kw-switch kw-endswitch
+ kw-case kw-default kw-break kw-continue kw-echo kw-print kw-class kw-extends
+ kw-new kw-var kw-eval kw-include kw-include_once kw-require kw-require_once
+ kw-global kw-isset kw-empty kw-static kw-unset kw-list kw-array kw-or kw-and
+ kw-xor op-semicolon)
+
+code:
+<?php
+exit die old_function Function cfunction const if
+elseif endif else while endwhile do for endfor
+forEach EndForEach declare enddeclare as switch endswitch
+case default break continue echo print class extends
+new var eval include include_once require require_once
+global isset empty static unset list array or and
+xor
+?>

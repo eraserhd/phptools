@@ -1,0 +1,10 @@
+submitted-by: 	"Jay 'Eraserhead' Felice <jfelice@cronosys.com>"
+date: 		"Tue Feb  5, 2002"
+options:	()
+description:	"Basic top-level."
+result: (null-statement)
+code:
+<?php 
+	;
+	{ ; }
+?>

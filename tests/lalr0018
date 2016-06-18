@@ -1,0 +1,13 @@
+submitted-by: 	"Jay 'Eraserhead' Felice <jfelice@cronosys.com>"
+date: 		"Tue Apr 16, 2002"
+options:	()
+description:	"Don't know what's going on here."
+result:
+(echo " hello ")
+
+code:
+<?php 
+
+{ { ?> hello <? } }
+
+?>

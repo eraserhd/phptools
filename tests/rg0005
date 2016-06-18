@@ -1,0 +1,22 @@
+submitted-by: 	"Jay 'Eraserhead' Felice <jfelice@cronosys.com>"
+date: 		"Tue Feb  5, 2002"
+options:	()
+description:	"Numbers with points."
+result:
+((v-dnumber . 0.45)
+ (v-dnumber . 0.45)
+ (v-dnumber . 45.0)
+ (v-dnumber . 1.0e8)
+ (v-dnumber . 1.0e8)
+ (v-dnumber . 1.0e-8)
+ (v-dnumber . 1.0e8)
+ (v-dnumber . 1.0e8)
+ (v-dnumber . 1.0e8)
+ op-semicolon
+ )
+
+code:
+<?php
+  .45 0.45 45.
+  1.0e8 1e8 1.0e-8 1.0e+8 1E8 .1e9
+?>

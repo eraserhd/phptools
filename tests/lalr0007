@@ -1,0 +1,27 @@
+submitted-by: 	"Jay 'Eraserhead' Felice <jfelice@cronosys.com>"
+date: 		"Tue Mar 19, 2002"
+options:	()
+description:	"for loops."
+result:
+(compound-statement
+  (for (for-expr
+         (op-= (var-lookup "i") 0)
+         (op-= (var-lookup "j") 9))
+       (op-< (var-value (var-lookup "i")) 5)
+       (op-post++ (var-lookup "i"))
+       "statement")
+  (for (op-= (var-lookup "i") 0)
+       (op-< (var-value (var-lookup "i")) 5)
+       (op-post++ (var-lookup "i"))
+       "statement"))
+
+code:
+<?php 
+  for ($i = 0, $j = 9; $i < 5; $i++)
+      "statement";
+
+  for ($i = 0; $i < 5; $i++):
+      "statement";
+  endfor;
+?>
+

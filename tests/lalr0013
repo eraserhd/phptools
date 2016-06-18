@@ -1,0 +1,15 @@
+submitted-by: 	"Jay 'Eraserhead' Felice <jfelice@cronosys.com>"
+date: 		"Tue Mar 19, 2002"
+options:	()
+description:	"`declare' statement."
+result:
+(declare ((tick . 2)) "statement")
+
+code:
+<?php 
+  
+  declare (tick=2) {
+    "statement";
+  }
+
+?>

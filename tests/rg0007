@@ -1,0 +1,22 @@
+submitted-by: 	"Jay 'Eraserhead' Felice <jfelice@cronosys.com>"
+date: 		"Wed Feb  6, 2002"
+options:	()
+description:	"Operators."
+result:
+(op--> op-paamayim-nekudotayim op-++ op--- op-=== op-!== op-== op-!= op-!=
+ op-<= op->= op-+= op--= op-*= op-/= op-.= op-%= op-<<= op->>= op-&=
+ op-bit-or= op-^= op-boolean-or op-&& kw-or kw-and op-<< op->>
+ op-lcbrace op-rcbrace op-lsqbrace op-rsqbrace op-semicolon op-colon
+ op-comma op-. op-lparen op-rparen op-bit-or op-^ op-& op-+ op-- op-/
+ op-* op-= op-% op-! op-~ op-$ op-< op-> op-? op-suppress
+ op-semicolon
+ )
+
+code:
+<?php
+  -> :: ++ -- === !== == != <>
+  <= >= += -= *= /= .= %= <<= >>= &=
+  |= ^= || && or and  << >>
+  { } [ ] ; : , . ( ) | ^ & + - /
+  * = % ! ~ $ < > ? @
+?>

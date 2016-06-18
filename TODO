@@ -1,0 +1,17 @@
+phptools TODO
+------------------------------------------------------------------------------
+
+- Ignore #! magic at beginning of script.
+- Make parser report filename (when available) and line number.  Format error
+  messages such that emacs and vim's quickfix modes can go to the right line.
+- Error recovery, so `phptools check' can report multiple errors.
+
+- `phptools lint' command.  The major issues to check for:
+  - Unreachable code (after `return', `die', `exit', etc.).
+  - Unused `global'- and `static'-declared variables.
+  - Local variables assigned values which are never used.
+
+- `phptools translate' command -- translates to Scheme source
+- `phptools compile' command -- translates and compiles to .o as bigloo module
+- `phptools run' command -- translates and evaluates with bigloo interpreter
+

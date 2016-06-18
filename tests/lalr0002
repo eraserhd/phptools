@@ -1,0 +1,40 @@
+submitted-by: 	"Jay 'Eraserhead' Felice <jfelice@cronosys.com>"
+date: 		"Tue Feb  5, 2002"
+options:	()
+description:	"C-style if statement."
+result:
+(compound-statement
+  (if condition:  "condition-1"
+      statement: "statement-1"
+      elseif-clauses: ((elseif
+			 condition: "condition-2"
+      			 statement: 
+			  (if condition: "condition-3"
+			      statement: "statement-2"
+			      else-statement: "statement-3"))))
+
+  (if condition: "condition-1"
+      statement: "statement-1"
+      elseif-clauses: ((elseif
+			 condition: "condition-2"
+			 statement: "statement-2"))
+      else-statement: "statement-3"))
+
+code:
+<?php 
+	if ("condition-1")
+		"statement-1";
+	elseif ("condition-2")
+		if ("condition-3")
+			"statement-2";
+		else // ambiguous else, should be grouped with condition-3 if.
+			"statement-3";
+
+	if ("condition-1")
+		"statement-1";
+	elseif ("condition-2")
+		"statement-2";
+	else
+		"statement-3";
+?>
+

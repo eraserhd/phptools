@@ -1,0 +1,18 @@
+phptools NEWS
+------------------------------------------------------------------------------
+
+Wed Aug 23, 2006:
+	* 0.5 released
+	* Added `phptools analyze-globals' to produce a report analyzing the
+	  occurrence and reference of global variables in a source tree.
+	* Lots of bug fixes to parser and scanner (still PHP4 only).
+
+Fri Aug 11, 2006:
+	* Project ressurected!
+
+Wed Apr 17, 2002:
+	* 0.1 released
+	* Scanner and parser finished, phptools program written.
+
+Mon Feb  4, 2002:
+	* Project started.

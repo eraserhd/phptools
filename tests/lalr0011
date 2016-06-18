@@ -1,0 +1,14 @@
+submitted-by: 	"Jay 'Eraserhead' Felice <jfelice@cronosys.com>"
+date: 		"Tue Mar 19, 2002"
+options:	()
+description:	"`unset'"
+result:
+(unset (var-lookup "v1")
+       (var-lookup "v2")
+       (var-lookup (var-lookup "v3")))
+
+code:
+<?php 
+  unset ($v1, $v2, $$v3);
+?>
+

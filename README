@@ -1,0 +1,29 @@
+phptools README
+------------------------------------------------------------------------------
+
+phptools is a collection of utilities for manipulating PHP source.  These tools
+are based around a bigloo-Scheme PHP scanner and parser.  Here are the tools
+I plan to implement:
+
+	phpindent		- Reindent PHP sourcecode.
+	phpcheck		- Syntax checker (will probably just be a
+				  symlink to phplint).  Some additonal
+				  options:
+				  * Enforce different naming conventions.
+				  * Enforce indentation.
+				  The idea is to use this in CVS commit
+				  checks to prevent bad commits.
+	phplint			- Check for dead code and security violations
+				  (passing tainted variables to database
+				  query functions, for example).  Will have
+				  lots of options to check for some things
+				  which really bug me:
+				  * Warn on `global'd variables which aren't
+				    referenced.
+				  * Missing htmlspecialchars() in output.
+	phptags			- Scan sources and make a ctags or etags file.
+	phpdoc			- There are two already, not counting my
+				  hackish-but-working version which needs
+				  to know more about syntax.
+	phpcall			- Print call graph.
+

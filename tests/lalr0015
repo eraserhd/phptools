@@ -1,0 +1,42 @@
+submitted-by: 	"Jay 'Eraserhead' Felice <jfelice@cronosys.com>"
+date: 		"Tue Mar 19, 2002"
+options:	()
+description:	"Functions."
+result:
+(compound-statement
+  (function
+    "test_func"
+    #f
+    ("arg1"
+     (by-reference "arg2_byref")
+     (const "arg3")
+     (default "arg4" "default"))
+    "statement")
+  (function
+    "test_func"
+    #f
+    ("arg1"
+     (by-reference "arg2_byref")
+     (const "arg3")
+     (default "arg4" "default"))
+    "statement")
+  (function "byref_func" #t () "statement"))
+
+code:
+<?php 
+  
+  function test_func ($arg1, &$arg2_byref, const $arg3, $arg4 = "default")
+  {
+  	"statement";
+  }
+
+  old_function test_func $arg1, &$arg2_byref, const $arg3, $arg4 = "default" (
+  	"statement";
+  );
+
+  function &byref_func ()
+  {
+        "statement";
+  }
+
+?>

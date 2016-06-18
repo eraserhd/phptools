@@ -1,0 +1,20 @@
+submitted-by: 	"Jay 'Eraserhead' Felice <jfelice@cronosys.com>"
+date: 		"Tue Mar 19, 2002"
+options:	()
+description:	"C-style, new-style while statements."
+result:
+(compound-statement
+  (while "condition" "statement")
+  (while "condition" "statement"))
+
+code:
+<?php 
+  while ("condition") {
+    "statement";
+  }
+
+  while ("condition"):
+    "statement";
+  endwhile;
+?>
+

@@ -1,0 +1,24 @@
+submitted-by: 	"Jay 'Eraserhead' Felice <jfelice@cronosys.com>"
+date: 		"Tue Feb  5, 2002"
+options:	()
+description:	"Casts."
+result: (
+ op-int-cast op-int-cast
+ op-double-cast op-double-cast op-double-cast
+ op-array-cast
+ op-string-cast
+ op-object-cast
+ op-bool-cast op-bool-cast
+ op-unset-cast
+ op-semicolon
+)
+code:
+<?php 
+  (int) (integer)
+  (real) ( double ) (float  )
+  (array)
+  (string)
+  ( object)
+  (bool) (boolean)
+  (unset)
+?>

@@ -1,0 +1,16 @@
+submitted-by: 	"Jay 'Eraserhead' Felice <jfelice@cronosys.com>"
+date: 		"Tue Mar 19, 2002"
+options:	()
+description:	"`global' and `static' statements."
+result:
+(compound-statement
+  (global "SCRIPT_NAME" (var-value (var-lookup "v")))
+  (static (static-variable-declaration "q" initial-value: 1)
+	  (static-variable-declaration "g" initial-value: 47)))
+
+code:
+<?php 
+	global $SCRIPT_NAME, $$v;
+	static $q = 1, $g = 47;
+?>
+
